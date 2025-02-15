@@ -5,7 +5,6 @@ import com.francieudo.agendamentonotificacaoapi.controller.dto.out.AgendamentoRe
 import com.francieudo.agendamentonotificacaoapi.infrastructure.entities.Agendamento;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.MappingTarget;
 
 import static org.mapstruct.MappingConstants.ComponentModel.SPRING;
 

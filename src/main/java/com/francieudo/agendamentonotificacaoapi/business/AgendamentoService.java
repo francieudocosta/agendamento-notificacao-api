@@ -7,6 +7,7 @@ import com.francieudo.agendamentonotificacaoapi.infrastructure.entities.Agendame
 import com.francieudo.agendamentonotificacaoapi.infrastructure.exception.NotFoundException;
 import com.francieudo.agendamentonotificacaoapi.infrastructure.repositories.AgendamentoRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
