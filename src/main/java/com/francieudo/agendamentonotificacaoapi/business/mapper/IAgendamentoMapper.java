@@ -4,6 +4,8 @@ import com.francieudo.agendamentonotificacaoapi.controller.dto.in.AgendamentoRec
 import com.francieudo.agendamentonotificacaoapi.controller.dto.out.AgendamentoRecordOut;
 import com.francieudo.agendamentonotificacaoapi.infrastructure.entities.Agendamento;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.MappingTarget;
 
 import static org.mapstruct.MappingConstants.ComponentModel.SPRING;
 
@@ -13,4 +15,8 @@ public interface IAgendamentoMapper {
     Agendamento paraEntity(AgendamentoRecord agendamentoRecord);
 
     AgendamentoRecordOut paraOut(Agendamento agendamento);
+
+    @Mapping(target = "dataHoraModificacao", expression = "java(LocalDateTime.now())")
+    @Mapping(target = "statusNotificacao", expression = "java(StatusNotificacaoEnum.CANCELADO)")
+    Agendamento paraEntityCancelamento(Agendamento agendamento);
 }
